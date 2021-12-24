@@ -1,0 +1,33 @@
+package WebTable;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class sample2_columnsize
+{
+	public static void main(String[] args) throws InterruptedException      
+	{
+		
+		System.setProperty("webdriver.chrome.driver", 
+				"E:\\new chromedriver.exe\\chromedriver.exe");
+		
+		
+		WebDriver driver=new ChromeDriver();
+		
+		
+		driver.get("file:///E:/html/sample4.html");                                      
+		
+		
+		int columnsize = driver.findElements(By.xpath("//table[@id='11']//tr[2]/td")).size();
+		
+		
+		System.out.println(columnsize);               //to find size of column in a particular row
+		
+		
+		
+		
+}}
